@@ -1,11 +1,9 @@
 // DEPENDENCIES
 const express = require("express");
+const { v4: uuidv4 } = require('uuid');
 
+// Variable for Express
 const app = express();
-
-const apiRoutes =require("./Routes/apiRoutes");
-const htmlRoutes =require("./Routes/htmlRoutes");
-
 // Set port
 const PORT = process.env.PORT || 3000;
 
@@ -14,11 +12,11 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // Reading public folder
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 // Routes
-app.use("/api", apiRoutes);
-app.use("/", htmlRoutes);
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app)
 
 //Listening to start server
 app.listen(PORT, () => console.log('listening on ${PORT}'));
