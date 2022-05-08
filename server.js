@@ -2,10 +2,11 @@
 const express = require("express");
 const { v4: uuidv4 } = require('uuid');
 
+// Set port
+const PORT = process.env.PORT || 3001;
 // Variable for Express
 const app = express();
-// Set port
-const PORT = process.env.PORT || 3000;
+
 
 // Sets Express app to handle parse
 app.use(express.urlencoded({ extended: true}));
@@ -19,4 +20,6 @@ require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app)
 
 //Listening to start server
-app.listen(PORT, () => console.log('listening on ${PORT}'));
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
