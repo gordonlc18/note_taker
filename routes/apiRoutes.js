@@ -30,18 +30,19 @@ module.exports = function (app) {
                 res.json(newNote);
             });
         });
-        app.delete('/api/notes/:id', function (req, res) {
-            fs.readFile('./db/db.json', 'utf8', function (error, data) {
+    })
+    app.delete('/api/notes/:id', function (req, res) {
+        fs.readFile('./db/db.json', 'utf8', function (error, data) {
+            
+            const db = JSON.parse(data);
+            console.log(db);
+            const deletedNote = db.filter((note) => note.id !== req.params.id);
+          
+            fs.writeFile('./db/db.json', JSON.stringify(deletedNote), function (error) {
+                if(error) throw error;
                 
-                const db = JSON.parse(data);
-                console.log(db);
-                const deletedNote = db.filter((note) => note.id !== req.params.id);
-              
-                fs.writeFile('./db/db.json', JSON.stringify(deletedNote), function (error) {
-                    if(error) throw error;
-                    
-                    res.json(deletedNote);
-                })
+                res.json(deletedNote);
             })
+        })
     });
 }
