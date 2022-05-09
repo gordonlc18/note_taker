@@ -4,6 +4,8 @@ _by Latravia Gordon_</br>
 
 ## Description
 
+A full stack application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file. </br> This application is deployed on [Heroku](https://aqueous-everglades-46355.herokuapp.com/).
+
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -14,17 +16,17 @@ _by Latravia Gordon_</br>
 - [Questions](#questions)
 - [License](#license)
 
-## Description
-
 # Requirements
 
-![User Story and Acceptance Criteria]()
+![User Story and Acceptance Criteria](./public/assets/images/userStory.jpeg)
 
 ## Installation
 
+The user should clone the repository, then run `npm init -y`, `npm i`, `npm install express`, `npm install uniqid`.
+
 # Usage
 
-[Video Demo]()
+<!-- [Video Demo]() -->
 
 # Screenshot
 
