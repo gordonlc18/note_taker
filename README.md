@@ -11,8 +11,8 @@ A full stack application called Note Taker that can be used to write and save no
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshot](#screenshot)
-- [Tests](#tests)
+  <!-- - [Screenshot](#screenshot) -->
+  <!-- - [Tests](#tests) -->
 - [Questions](#questions)
 - [License](#license)
 
@@ -22,15 +22,17 @@ A full stack application called Note Taker that can be used to write and save no
 
 ## Installation
 
-The user should clone the repository, then run `npm init -y`, `npm i`, `npm install express`, `npm install uniqid`.
+The user should clone the repository, run `npm install` to install dependencies. To use locally, from the CLI, run `node server.js`.
 
 # Usage
 
+![noteTaker](./public/assets/images/noteTaker.gif)
+
 <!-- [Video Demo]() -->
 
-# Screenshot
+<!-- # Screenshot -->
 
-## Tests
+<!-- ## Tests -->
 
 ## Questions
 
