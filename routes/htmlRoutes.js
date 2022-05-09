@@ -2,7 +2,7 @@ const db = require("../db/db.json");
 const path = require('path');
 const express = require('express');
 
-var app = express();
+let app = express();
 
 
 module.exports = function(app) {

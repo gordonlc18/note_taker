@@ -4,8 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 
 // Set port
 const PORT = process.env.PORT || 3001;
-// Variable for Express
-const app = express();
+// Instantiate the server
+let app = express();
 
 
 // Sets Express app to handle parse
